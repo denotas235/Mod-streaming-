@@ -1,16 +1,16 @@
 package com.nexus.derivative.render;
 
-import com.nexus.derivative.util.ChunkUtils;
 import net.minecraft.client.network.ClientPlayerEntity;
 
 public class VisibilityController {
-    public static void update(ClientPlayerEntity player, int chunkX, int chunkZ) {
-        ChunkUtils.setVisible(chunkX, chunkZ, true);
-        ChunkUtils.setVisible(chunkX + 1, chunkZ, true);
-        ChunkUtils.setVisible(chunkX, chunkZ + 1, true);
-    }
 
-    public static void updateVisibleQuadrants(Object camera) {
-        // Hook WorldRendererMixin
+    public static boolean shouldRenderChunk(int cx, int cz, ClientPlayerEntity player) {
+
+        double dx = (cx << 4) - player.getX();
+        double dz = (cz << 4) - player.getZ();
+
+        double distSq = dx*dx + dz*dz;
+
+        return distSq < 300 * 300;
     }
 }
