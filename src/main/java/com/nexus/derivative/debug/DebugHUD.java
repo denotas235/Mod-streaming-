@@ -4,8 +4,8 @@ import com.nexus.derivative.math.DerivativeState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.TextRenderer;
-import net.minecraft.util.math.Matrix4f;
+import net.minecraft.client.font.TextRenderer;
+import org.joml.Matrix4f;
 
 public class DebugHUD {
 
