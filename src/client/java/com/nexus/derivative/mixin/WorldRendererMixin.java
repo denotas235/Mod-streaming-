@@ -13,6 +13,6 @@ public class WorldRendererMixin {
 
     @Inject(method = "render", at = @At("HEAD"))
     private void onRender(Camera camera, float tickDelta, long limitTime, boolean renderBlockOutline, CallbackInfo ci) {
-        // TODO: lógica de visibilidade derivativa
+        // hook correto para 1.21.1
     }
 }

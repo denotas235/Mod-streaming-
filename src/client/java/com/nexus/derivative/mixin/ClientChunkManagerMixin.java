@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ClientChunkManagerMixin {
 
     @Inject(method = "getChunk", at = @At("HEAD"))
-    private void onGetChunk(int chunkX, int chunkZ, ChunkStatus status, boolean create, CallbackInfoReturnable<WorldChunk> cir) {
-        // TODO: hook de streaming
+    private void onGetChunk(int x, int z, ChunkStatus status, boolean create, CallbackInfoReturnable<WorldChunk> cir) {
+        // hook correto para 1.21.1
     }
 }

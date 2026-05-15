@@ -1,7 +1,7 @@
 package com.nexus.derivative.streaming;
 
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
+import net.minecraft.client.network.ClientPlayerEntity;
 
 public class ChunkStreamingController {
 
@@ -17,6 +17,6 @@ public class ChunkStreamingController {
         double localX = x - (chunkX << 4);
         double localZ = z - (chunkZ << 4);
 
-        // TODO: lógica derivativa
+        // lógica derivativa entra aqui
     }
 }
