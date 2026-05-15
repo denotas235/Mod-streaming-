@@ -20,7 +20,9 @@ public class NexusDerivativeStreaming implements ClientModInitializer {
 
         ClientPlayerEntity player = client.player;
 
-        DerivativeState.update(player.getX(), player.getZ(), client.getLastFrameDuration());
+        float tickDelta = client.getRenderTickCounter().getTickDelta(true);
+
+        DerivativeState.update(player.getX(), player.getZ(), tickDelta);
         ChunkStreamingController.update(client.world, player);
     }
 }
