@@ -25,3 +25,9 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build --stacktrace
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mod-streaming-jar
+          path: build/libs/*.jar
